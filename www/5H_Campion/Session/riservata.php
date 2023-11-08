@@ -6,8 +6,7 @@
         // Se l'utente non è autenticato, reindirizza alla pagina di accesso
         header('Location: login.php');
         exit;
-        }
-        echo "<h1>Benvenuto<h1><br>Sei dentro la pagina riservata!";
+    }
     ?>
 <!DOCTYPE html>
 <html>
