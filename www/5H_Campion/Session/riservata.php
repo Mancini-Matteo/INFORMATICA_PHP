@@ -2,10 +2,11 @@
         session_start();
 
         // Verifica se l'utente è autenticato
-    if (!empty($_SESSION["username"]) || !empty($_SESSION["password"])) {
-        // Se l'utente non è autenticato, reindirizza alla pagina di accesso
-        header('Location: login.php');
-        exit;
+   if (!isset($_SESSION["username"]) || !isset($_SESSION["password"])) { // Se l'utente non è autenticato, reindirizza alla pagina di accesso
+      if ($_SESSION["username"] !== "Utente" && $_SESSION["password"] !== "password") {
+              header("Location: login.php");
+             exit;
+        }
     }
     ?>
 <!DOCTYPE html>

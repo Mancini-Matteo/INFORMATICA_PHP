@@ -2,7 +2,7 @@
 session_start();
 
 // Verifica se l'utente è già autenticato e reindirizza alla pagina di benvenuto
-if ($_SESSION["username"] === "Utente" && $_SESSION["password"] === "password") {
+if (isset($_SESSION["username"]) && isset($_SESSION["password"]) && $_SESSION["username"] === "Utente" && $_SESSION["password"] === "password") {
     header('Location: riservata.php');
     exit;
 }
