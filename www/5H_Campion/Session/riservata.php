@@ -8,6 +8,9 @@
              exit;
         }
     }
+    $utente = $_SESSION["username"];
+    echo "<h1>Benvenuto</h1>";
+    echo "Ciao $utente, sei autenticato. Benvenuto";
     ?>
 <!DOCTYPE html>
 <html>
@@ -15,9 +18,6 @@
     <title>Benvenuto</title>
 </head>
 <body>
-    <h1>Benvenuto</h1>
-
-    <p>Ciao, sei autenticato. Benvenuto!</p>
     <p><a href="logout.php">Logout</a></p>
 </body>
 </html>
