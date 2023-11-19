@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST["password"] ?? ""; 
 
     // Verifica se le credenziali sono corrette
-    if ($username === "Utente" && $password === "password") {
+    if ($password === "password") {
         // Credenziali corrette, crea una variabile di sessione per l'autenticazione
         $_SESSION["username"] = $username;
         header('Location: riservata.php');
